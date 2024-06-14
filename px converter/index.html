@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="converter">
+            <div class="input-group">
+                <label for="user-width">User Width (px):</label>
+                <input type="number" id="user-width" placeholder="Enter user width in px" value="1920"> <!-- Default width value -->
+            </div>
+            <div class="input-group">
+                <label for="user-height">User Height (px):</label>
+                <input type="number" id="user-height" placeholder="Enter user height in px" value="1080"> <!-- Default height value -->
+            </div>
+            <div class="input-group">
+                <label for="px">Pixels (px):</label>
+                <input type="number" id="px" placeholder="Enter value in px">
+                <button onclick="convertPx()">Convert</button>
+            </div>
+            <div class="input-group">
+                <label for="vw">Viewport Width (vw):</label>
+                <input type="number" id="vw" placeholder="Enter value in vw" value="10"> <!-- Default value set to 10vw -->
+                <button onclick="convertVw()">Convert</button>
+            </div>
+            <div class="input-group">
+                <label for="vh">Viewport Height (vh):</label>
+                <input type="number" id="vh" placeholder="Enter value in vh" value="10"> <!-- Default value set to 10vh -->
+                <button onclick="convertVh()">Convert</button>
+            </div>
+        </div>
+        <div class="results">
+            <h2>Results:</h2>
+            <p id="result-px">px: <span id="px-result"></span> <button onclick="copyToClipboard('px-result')">Copy px</button></p>
+            <p id="result-vw">vw: <span id="vw-result"></span> <button onclick="copyToClipboard('vw-result')">Copy vw</button></p>
+            <p id="result-vh">vh: <span id="vh-result"></span> <button onclick="copyToClipboard('vh-result')">Copy vh</button></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
